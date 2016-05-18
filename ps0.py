@@ -63,7 +63,7 @@ def factorial(integer):													 # define the function, it takes 1 parameter
 	while counter <= integer: 										 	 # keeps the loop running while the next integer is not greater than the integer that is the parameter 
 		totalProduct = totalProduct * counter							 # multiplies new counter value to the product of the rest of the counter values
 		counter += 1													 # increments the counter by one to prepare to multiply the next integer
-	return str(totalProduct) + ", which is {}! ".format(integer)			     # returns what the factorial of the integer is, as well as what the factorial was
+	return totalProduct												     # returns what the factorial of the integer is
 
 
 # function 5
