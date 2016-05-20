@@ -36,20 +36,12 @@ def sum_of_digits(integer):						# define the function, it takes 1 parameter
 # function 3
 ''' takes a non-negative integer as a parameter and returns the sum of all the integers that are less than the given number '''
 
-def sum_less_ints(integer):							  # define the function, it takes 1 parameter 
-	if integer == 0:
-		return "0, which is 0"
-	sumOfInts = 0									  # keeps track of the sum of all the integers that have been added 
-	addingInt = 1									  # the integer that is to be added up and compared to the integer that is the parameter
-	stringOfInts = ""								  # keeps track of the integers to print them out at the end
-	while (sumOfInts + addingInt) <= integer: 		  # runs the loop while the sum of all the integers is less than the integer that is the parameter
-		if len(stringOfInts) != 0: 					  # adds a plus sign to the string that is to be printed out at the end if the string is not empty (so it won't print + 1)
-			stringOfInts += " + "					  # plus sign being added to the string 
-		sumOfInts += addingInt						  # adds the next integer to the rest 
-		stringOfInts += str(addingInt)				  # adds the next integer to the list that will be printed at the end
-		addingInt += 1								  # adds 1 to the counter so the next integer will be added
-	return str(integer) + ", which is " + stringOfInts # returns what the integer was, as well as all the integers who's sum was less than it
-	
+def sum_less_ints(integer):						# define the function
+	sumInts = 0									# sets variable that will collect all the numbers less than integer
+	for x in range(integer - 1):				# loops through consecutive numbers less than integer
+		sumInts += (x + 1)						# adds the number to sumInts, adds one to x because x starts at 0
+	return sumInts								# when the loop is finished, the sum of all the numbers less than the int is returned
+		
 	
 # function 4	
 ''' takes a non-negative integer as a parameter and returns its factorial '''
